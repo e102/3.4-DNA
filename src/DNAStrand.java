@@ -14,7 +14,8 @@ public class DNAStrand {
 		
 		for(int i = 0; i < base.length(); i++){
 			char z = base.charAt(i);
-			if (z != 'A' || z != 'T' || z != 'C' || z != 'G'){
+			if (z != 'A' && z != 'T' && z != 'C' && z != 'G'){
+				System.out.println("Bad value");
 				return false;
 			}
 		}
@@ -46,8 +47,20 @@ public class DNAStrand {
 	public String palindromeWC(){
 		s.setLength(0);
 		String palindrome = this.complementWC();
+		s.setLength(0);
 		s.append(palindrome);
 		s.reverse();
 		return(s.toString());
+	}
+	
+	public boolean containsSequence(String seq){
+		if(base.contains(seq)){
+			return true;
+		}
+		return false;
+	}
+	
+	public String toString(){
+		return(base.toString());
 	}
 }
