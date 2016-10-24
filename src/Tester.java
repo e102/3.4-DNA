@@ -1,7 +1,7 @@
 public class Tester {
 
 	public static void main(String[] args) {
-		DNAStrand dna = new DNAStrand("ATGC");
+		DNAStrand dna = new DNAStrand("atgc");
 		System.out.println("Original DNA Sequence: " + dna.toString());
 		System.out.println(dna.containsSequence("ATG"));
 		
